@@ -8,6 +8,10 @@ dynaconf==3.2.5
     # via -r requirements.in
 greenlet==3.0.3
     # via sqlalchemy
+psycopg2==2.9.9
+    # via -r requirements.in
+psycopg2-binary==2.9.9
+    # via -r requirements.in
 sqlalchemy==2.0.30
     # via -r requirements.in
 typing-extensions==4.11.0
