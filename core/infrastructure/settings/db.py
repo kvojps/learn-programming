@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-from settings.env_handler import settings
+from core.infrastructure.settings.env_handler import settings
 
 """
 The engine variable is an instance of the create_engine class from the SQLAlchemy library,

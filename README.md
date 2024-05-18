@@ -44,7 +44,7 @@ Crie um arquivo .env na raíz do projeto e preencha de acordo com o .env.example
 Em construção...
 
 ## 1.4 Entendimento do código
-### 1.4.1 Pacote settings
+### 1.4.1 Pacote core/infrastructure/settings
 - O pacote settings é responsável pelas configurações necessárias para acessar recursos externos;
 - O arquivo **env_handler.py** é responsável pela obtenção de váriaveis de ambiente presentes no arquivo .env;
 - O arquivo **db.py** é responsável por:
