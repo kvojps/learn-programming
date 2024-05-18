@@ -37,5 +37,8 @@ pip-compile requirements.in
 pip install -r requirements.txt
 ```
 
+### Criação do arquivo de variável de ambiente
+Crie um arquivo .env na raíz do projeto e preencha de acordo com o .env.example.
+
 ### Execução do código
 Em construção...
