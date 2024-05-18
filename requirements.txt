@@ -4,6 +4,8 @@
 #
 #    pip-compile requirements.in
 #
+annotated-types==0.6.0
+    # via pydantic
 dynaconf==3.2.5
     # via -r requirements.in
 greenlet==3.0.3
@@ -12,7 +14,14 @@ psycopg2==2.9.9
     # via -r requirements.in
 psycopg2-binary==2.9.9
     # via -r requirements.in
+pydantic==2.7.1
+    # via -r requirements.in
+pydantic-core==2.18.2
+    # via pydantic
 sqlalchemy==2.0.30
     # via -r requirements.in
 typing-extensions==4.11.0
-    # via sqlalchemy
+    # via
+    #   pydantic
+    #   pydantic-core
+    #   sqlalchemy
