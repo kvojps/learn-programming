@@ -1,6 +1,6 @@
 from core.infrastructure.settings.db import engine
-from .person import Person
+from .user import User
 
 
 def create_tables():
-    Person.metadata.create_all(engine)
+    User.metadata.create_all(engine)
