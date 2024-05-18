@@ -1,3 +1,4 @@
+from contextlib import contextmanager
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
@@ -24,6 +25,7 @@ responsible for managing the base class for all the models in the application.
 SqlAlchemyBaseEntity = declarative_base()
 
 
+@contextmanager
 def get_session():
     session = SessionLocal()
     try:
