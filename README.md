@@ -75,6 +75,17 @@ Quando você usa get_session em uma declaração with, como with get_session() a
 - Consome o restante do gerador (neste caso, não há mais itens a serem produzidos).
 - Executa o bloco finally, fechando a sessão do banco de dados.
 
+``` python
+if __name__ == "__main__":
+    create_tables()
+
+    with get_session() as session:
+        person = Person(name="John", age=30)
+        session.add(person)
+        session.commit()
+        print("Person added successfully!")
+```
+
 Isso garante que a sessão do banco de dados seja sempre fechada corretamente, mesmo que ocorra um erro dentro do bloco with. Isso não seria possível se você usasse return em vez de yield.
 
 ### 1.4.2 Pacote core/infrastructure/orm/models
