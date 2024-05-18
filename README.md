@@ -55,12 +55,12 @@ Crie um arquivo .env na raíz do projeto e preencha de acordo com o .env.example
 
  #### 1.4.1.1 Obter sessão com o banco de dados
  ```python
-    def get_session():
-        session = SessionLocal()
-        try:
-            yield session
-        finally:
-            session.close()
+def get_session():
+    session = SessionLocal()
+    try:
+        yield session
+    finally:
+        session.close()
 ```
 A razão para usar yield em vez de return nesta função é para aproveitar a funcionalidade dos geradores e dos gerenciadores de contexto em Python.
 
