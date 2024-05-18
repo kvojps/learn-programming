@@ -41,7 +41,8 @@ pip install -r requirements.txt
 Crie um arquivo .env na raíz do projeto e preencha de acordo com o .env.example.
 
 ### 1.3.4 Execução do código
-Em construção...
+- Execute o arquivo **main.py** na raíz do projeto;
+  - Este arquivo executa uma inserção de dados no banco de dados por meio dos artefados construídos nessa aula;
 
 ## 1.4 Entendimento do código
 ### 1.4.1 Pacote core/infrastructure/settings
@@ -75,3 +76,6 @@ Quando você usa get_session em uma declaração with, como with get_session() a
 - Executa o bloco finally, fechando a sessão do banco de dados.
 
 Isso garante que a sessão do banco de dados seja sempre fechada corretamente, mesmo que ocorra um erro dentro do bloco with. Isso não seria possível se você usasse return em vez de yield.
+
+### 1.4.2 Pacote core/infrastructure/orm/models
+- Este pacote é responsável pela definição dos objetos que serão persistidos por meio do ORM;
