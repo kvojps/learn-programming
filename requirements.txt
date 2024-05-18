@@ -4,6 +4,8 @@
 #
 #    pip-compile requirements.in
 #
+dynaconf==3.2.5
+    # via -r requirements.in
 greenlet==3.0.3
     # via sqlalchemy
 sqlalchemy==2.0.30
