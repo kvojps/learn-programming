@@ -1,5 +1,5 @@
-from core.infrastructure.orm.models import create_tables
-from core.infrastructure.orm.models.person import Person
+from core.infrastructure.sqlalchemy_orm.models import create_tables
+from core.infrastructure.sqlalchemy_orm.models.person import Person
 from core.infrastructure.settings.db import get_session
 
 if __name__ == "__main__":
