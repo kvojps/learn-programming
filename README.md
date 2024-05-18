@@ -42,3 +42,12 @@ Crie um arquivo .env na raíz do projeto e preencha de acordo com o .env.example
 
 ### Execução do código
 Em construção...
+
+## Entendimento do código
+- Criação do pacote settings;
+    - O pacote settings é responsável pelas configurações necessárias para acessar recursos externos;
+    - O arquivo **env_handler.py** é responsável pela obtenção de váriaveis de ambiente presentes no arquivo .env;
+    - O arquivo **db.py** é responsável por:
+      - Realizar a conexão com o banco de dados;
+      - Criar uma sessão com o banco de dados;
+      - Definir a classe Base do ORM SQLAlchemy que serão utilizadas por todas as classes que serão persistidas no banco de dados;
