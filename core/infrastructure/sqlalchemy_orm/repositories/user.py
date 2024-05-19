@@ -34,7 +34,7 @@ class SqlAlchemyUserRepository(IUserRepository):
 
     def get_user_by_id(self, id) -> User:
         sql_alchemy_user = (
-            self.session.query(SqlAlchemyUser).filter(User.id == id).first()
+            self.session.query(SqlAlchemyUser).filter(SqlAlchemyUser.id == id).first()
         )
 
         return User(
@@ -46,7 +46,7 @@ class SqlAlchemyUserRepository(IUserRepository):
 
     def update_user(self, id, user: User) -> User:
         sql_alchemy_user_to_update = (
-            self.session.query(SqlAlchemyUser).filter(User.id == id).first()
+            self.session.query(SqlAlchemyUser).filter(SqlAlchemyUser.id == id).first()
         )
         sql_alchemy_user_to_update.name = user.name
         sql_alchemy_user_to_update.email = user.email
@@ -60,7 +60,7 @@ class SqlAlchemyUserRepository(IUserRepository):
 
     def delete_user(self, id) -> None:
         user_to_delete = (
-            self.session.query(SqlAlchemyUser).filter(User.id == id).first()
+            self.session.query(SqlAlchemyUser).filter(SqlAlchemyUser.id == id).first()
         )
 
         self.session.delete(user_to_delete)
