@@ -1,3 +1,7 @@
+# Sumário
+- [Aula 1: ORM (Branch: feat/lesson-1-orm)](#aula-1-orm-branch-featlesson-1-orm)
+- [Aula 2: Repository pattern (Branch: feat/lesson-2-repo-pattern)](#aula-2-repository-pattern-branch-featlesson-2-repo-pattern)
+
 # Aula 1: ORM (Branch: feat/lesson-1-orm)
 
 ## 1.1 O que é um ORM?
