@@ -1,8 +1,8 @@
 # Sumário
 - [Aula 1: ORM (Branch: feat/lesson-1-orm)](#aula-1-orm-branch-featlesson-1-orm)
 - [Aula 2: Repository pattern (Branch: feat/lesson-2-repo-pattern)](#aula-2-repository-pattern-branch-featlesson-2-repo-pattern)
-- [Apêndices](#apendices)
-  - [Melhores práticas no design de Rest APIs](#melhores-praticas-apis-rest)
+- [Apêndices](#apêndices)
+  - [Melhores práticas no design de REST APIs](#melhores-práticas-no-design-de-rest-apis)
 
 # Aula 1: ORM (Branch: feat/lesson-1-orm)
 
