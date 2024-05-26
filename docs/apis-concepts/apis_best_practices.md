@@ -1,4 +1,4 @@
-# Melhores práticas no design de Rest APIs
+# Melhores práticas no design de APIs Rest
 
 ## URI 
 - **Substantivos:** Use substantivos nas URIs para identificar claramente os recursos. Evite verbos, pois as URIs devem representar recursos e não ações. Por exemplo, em vez de **/getUser** use **/users**.
