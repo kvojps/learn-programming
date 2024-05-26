@@ -1,4 +1,6 @@
-# 1 - ORM [(Branch: feat/lesson-1-orm)](https://github.com/kvojps/learn-programming/tree/feat/lesson-1-orm)
+# 1 - ORM
+O código desta aula está disponível na branch indicada abaixo:
+- [(Branch: feat/lesson-1-orm)](https://github.com/kvojps/learn-programming/tree/feat/lesson-1-orm)
 
 ## 1.1 O que é um ORM?
 Um ORM (Object-Relational Mapping) é uma técnica de programação que mapeia objetos definidos em uma linguagem de programação orientada a objetos para estruturas de dados em um banco de dados relacional. Isso permite que os desenvolvedores usem objetos e métodos orientados a objetos para interagir com o banco de dados, em vez de escrever consultas SQL diretamente.
@@ -6,8 +8,7 @@ Um ORM (Object-Relational Mapping) é uma técnica de programação que mapeia o
 ## 1.2 O que é o SQLAlchemy?
 O SQLAlchemy é uma biblioteca de mapeamento objeto-relacional (ORM) para Python. Ele fornece uma maneira de mapear objetos Python para tabelas em um banco de dados relacional, facilitando o desenvolvimento de aplicativos que lidam com dados de maneira orientada a objetos. SQLAlchemy suporta uma variedade de bancos de dados SQL e oferece uma API flexível e poderosa para criar consultas, gerenciar transações e interagir com o banco de dados de forma programática.
 
-## 1.3 O que é necessário para executar o código da primeira aula?
-- Acesse a branch **feat/lesson-1-orm** para verificar o código desta aula.
+## 1.3 Configuração do SQLAlchemy no projeto
 
 ### 1.3.1 Criação do ambiente virtual
 - Qual importância de um ambiente virtual python?
@@ -42,12 +43,7 @@ pip install -r requirements.txt
 ### 1.3.3 Criação do arquivo de variável de ambiente
 Crie um arquivo .env na raíz do projeto e preencha de acordo com o .env.example.
 
-### 1.3.4 Execução do código
-- Execute o arquivo **main.py** na raíz do projeto;
-  - Este arquivo executa uma inserção de dados no banco de dados por meio dos artefados construídos nessa aula;
-
-## 1.4 Entendimento do código
-### 1.4.1 Módulo core/infrastructure/settings
+### 1.3.4 Definição do módulo core/infrastructure/settings
 - O módulo settings é responsável pelas configurações necessárias para acessar recursos externos;
 - O arquivo **env_handler.py** é responsável pela obtenção de váriaveis de ambiente presentes no arquivo .env;
 - O arquivo **db.py** é responsável por:
@@ -55,7 +51,7 @@ Crie um arquivo .env na raíz do projeto e preencha de acordo com o .env.example
     - Criar uma sessão com o banco de dados;
     - Definir a classe Base do ORM SQLAlchemy que serão utilizadas por todas as classes que serão persistidas no banco de dados;
 
-#### 1.4.1.1 Obter sessão com o banco de dados
+### 1.3.5 Obter sessão com o banco de dados
 
 ```python
 def get_session():
@@ -91,5 +87,9 @@ if __name__ == "__main__":
 
 Isso garante que a sessão do banco de dados seja sempre fechada corretamente, mesmo que ocorra um erro dentro do bloco with. Isso não seria possível se você usasse return em vez de yield.
 
-### 1.4.2 Módulo core/infrastructure/orm/models
+### 1.3.6 Módulo core/infrastructure/orm/models
 - Este módulo é responsável pela definição dos objetos que serão persistidos por meio do ORM;
+
+### 1.3.7 Execução do código
+- Execute o arquivo **main.py** na raíz do projeto;
+  - Este arquivo executa uma inserção de dados no banco de dados por meio dos artefados construídos nessa aula;
