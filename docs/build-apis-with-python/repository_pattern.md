@@ -19,6 +19,7 @@ pip install -r requirements.txt
 #### 2.2.2.1 Interfaces
 - Foi criado um módulo repositories na raíz do módulo infrastructure, onde vão ficar as interfaces de repositórios.
   - Por que usar interfaces? Os métodos de operação no banco de dados serão sempre os mesmos, o que pode variar é a implementação conforme o ORM utilizado. Utilizar interfaces garante que nossas definições de código permaneçam agnósticas em relação à implementação real. Além disso, facilita os testes, permitindo que as interfaces sejam implementadas de forma específica para testes.
+
   ``` python
   from abc import ABC, abstractmethod
   from core.domain.user import User
@@ -45,6 +46,7 @@ pip install -r requirements.txt
 
 #### 2.2.2.1 Implementações
 - Este é um exemplo de implementação da interface do repositório de usuário para o contexto do SQLAlchemy:
+
 ``` python
 from core.domain.user import User
 from core.infrastructure.repositories.user import IUserRepository
