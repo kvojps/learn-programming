@@ -12,6 +12,7 @@ O SQLAlchemy é uma biblioteca de mapeamento objeto-relacional (ORM) para Python
 ### 1.3.1 Criação do ambiente virtual
 - Qual importância de um ambiente virtual python?
     - Isolar as dependências do seu projeto do sistema global. Isso é essencial para evitar conflitos entre diferentes projetos que possam exigir versões distintas das mesmas bibliotecas.
+
 ```bash
 # Criação do ambiente virtual
 python -m venv .venv
@@ -24,6 +25,7 @@ python -m venv .venv
 ```
 
 ### 1.3.2 Instalação das dependências do projeto
+
 ``` bash
 # Instalar dependências de dev
 # Estas dependências não impactam no funcionamento do projeto
@@ -54,7 +56,8 @@ Crie um arquivo .env na raíz do projeto e preencha de acordo com o .env.example
     - Definir a classe Base do ORM SQLAlchemy que serão utilizadas por todas as classes que serão persistidas no banco de dados;
 
  #### 1.4.1.1 Obter sessão com o banco de dados
- ```python
+
+```python
 def get_session():
     session = SessionLocal()
     try:
