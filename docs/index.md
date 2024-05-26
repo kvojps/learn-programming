@@ -1,4 +1,6 @@
-# Programming with Kvojps
+# Navegação
 
-## Navegação
-- [Aprendendo conceitos de API com Python](teaching_python_api_concepts.md)
+- [Melhores práticas no design de Rest APIs](apis-concepts/apis_best_practices.md)
+- Construção de APIs com Python
+  - [ORM](build-apis-with-python/orm.md)
+  - [Repository pattern](build-apis-with-python/repository_pattern.md)
