@@ -55,7 +55,7 @@ Crie um arquivo .env na raíz do projeto e preencha de acordo com o .env.example
     - Criar uma sessão com o banco de dados;
     - Definir a classe Base do ORM SQLAlchemy que serão utilizadas por todas as classes que serão persistidas no banco de dados;
 
- #### 1.4.1.1 Obter sessão com o banco de dados
+#### 1.4.1.1 Obter sessão com o banco de dados
 
 ```python
 def get_session():
