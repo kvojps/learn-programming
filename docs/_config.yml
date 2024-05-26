@@ -1,2 +1,12 @@
+# Jekyll configuration
 theme: jekyll-theme-slate
+
+# Site settings
 title: Progamming with Kvojps
+url: https://kvojps.github.io/learn-programming/
+
+# Owner/Author information
+author:
+  name: José Ferreira
+social:
+  linkedin: "https://www.linkedin.com/in/seuusuario"
