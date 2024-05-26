@@ -1,1 +1,1 @@
-[Acesse este link para aprendermos juntos](https://github.com/kvojps/learn-programming)
+[Acesse este link para aprendermos juntos](https://kvojps.github.io/learn-programming/)
