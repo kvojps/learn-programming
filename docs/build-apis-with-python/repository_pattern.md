@@ -1,4 +1,4 @@
-# 2 - Repository pattern (Branch: feat/lesson-2-repo-pattern)
+# 2 - Repository pattern [(Branch: feat/lesson-2-repo-pattern)](https://github.com/kvojps/learn-programming/tree/feat/lesson-2-repo-pattern)
 
 ## 2.1 O que é o Repository pattern?
 O Repository Pattern cria uma camada de abstração entre a aplicação e a fonte de dados. Ele encapsula a lógica necessária para acessar, armazenar e gerenciar dados, proporcionando uma interface que permite a comunicação com a fonte de dados sem que a lógica de negócios precise conhecer os detalhes da implementação da persistência.
