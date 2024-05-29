@@ -54,6 +54,7 @@ Crie um arquivo .env na raíz do projeto e preencha de acordo com o .env.example
 ### 1.3.5 Obter sessão com o banco de dados
 
 ```python
+@contextmanager
 def get_session():
     session = SessionLocal()
     try:
