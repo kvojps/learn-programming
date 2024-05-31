@@ -1,8 +1,8 @@
-# 2 - Gerenciamento de erros na camada de repositório
+# 3 - Gerenciamento de erros na camada de repositório
 O código desta aula está disponível na branch indicada abaixo:
 - [(Branch: feat/lesson-3-repo-error-handling)](https://github.com/kvojps/learn-programming/tree/feat/lesson-3-repo-error-handling)
 
-## 2.1 Implementação
+## 3.1 Implementação
 
 ``` python
 @contextmanager
@@ -154,7 +154,7 @@ Observe que a função _get_user_by_id, encarregada de retornar um usuário ou l
 
 É ideal que os erros sejam tratados em várias camadas do sistema, desde as mais internas até chegarem ao usuário final de maneira amigável. Esse tratamento amigável dos erros ocorrerá especificamente na camada da API, onde as mensagens de erro serão formatadas de forma clara e compreensível para o usuário, facilitando a identificação e resolução de problemas durante a interação com o sistema.
 
-## 2.2. Execução do código
+## 3.2 Execução do código
 - Acesse a branch **feat/lesson-3-repo-error-handling** para verificar o código desta aula.
 - Execute o arquivo **main.py** na raíz do projeto;
   - Este arquivo executa operações no banco de dados por meio dos artefatos construídos nessa aula;
