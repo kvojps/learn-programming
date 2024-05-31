@@ -1,6 +1,6 @@
 # 2 - Gerenciamento de erros na camada de repositório
 O código desta aula está disponível na branch indicada abaixo:
-- [(Branch: feat/lesson-3-repo-error-handling)](https://github.com/kvojps/learn-programming/tree/feat/lesson-3-error-handling)
+- [(Branch: feat/lesson-3-repo-error-handling)](https://github.com/kvojps/learn-programming/tree/feat/lesson-3-repo-error-handling)
 
 ## 2.1 Implementação
 
