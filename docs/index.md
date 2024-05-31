@@ -6,3 +6,4 @@
 - Construção de APIs com Python
   - [ORM](build-apis-with-python/orm.md)
   - [Repository pattern](build-apis-with-python/repository_pattern.md)
+  - [Gerenciamento de erros na camada de repositório](build-apis-with-python/repo_error_handling.md)
