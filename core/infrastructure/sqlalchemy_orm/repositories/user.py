@@ -35,9 +35,7 @@ class SqlAlchemyUserRepository(IUserRepository):
 
     def get_user_by_id(self, id) -> User:
         with get_session() as session:
-            sql_alchemy_user = (
-                session.query(SqlAlchemyUser).filter(SqlAlchemyUser.id == id).first()
-            )
+            sql_alchemy_user = self._get_user_by_id(session, id)
 
             return User(
                 id=int(sql_alchemy_user.id),
@@ -48,12 +46,11 @@ class SqlAlchemyUserRepository(IUserRepository):
 
     def update_user(self, id, user: User) -> User:
         with get_session() as session:
-            sql_alchemy_user_to_update = (
-                session.query(SqlAlchemyUser).filter(SqlAlchemyUser.id == id).first()
-            )
-            sql_alchemy_user_to_update.name = user.name
-            sql_alchemy_user_to_update.email = user.email
-            sql_alchemy_user_to_update.password = user.password
+            sql_alchemy_user_to_update = self._get_user_by_id(session, id)
+
+            sql_alchemy_user_to_update.name = user.name  # type: ignore
+            sql_alchemy_user_to_update.email = user.email  # type: ignore
+            sql_alchemy_user_to_update.password = user.password  # type: ignore
 
             session.commit()
             session.refresh(sql_alchemy_user_to_update)
@@ -64,9 +61,19 @@ class SqlAlchemyUserRepository(IUserRepository):
 
     def delete_user(self, id) -> None:
         with get_session() as session:
-            user_to_delete = (
-                session.query(SqlAlchemyUser).filter(SqlAlchemyUser.id == id).first()
-            )
+            sql_alchemy_user = self._get_user_by_id(session, id)
 
-            session.delete(user_to_delete)
+            session.delete(sql_alchemy_user)
             session.commit()
+
+    def _get_user_by_id(self, session, id_user: int) -> SqlAlchemyUser:
+        if (
+            sql_alchemy_user := (
+                session.query(SqlAlchemyUser)
+                .filter(SqlAlchemyUser.id == id_user)
+                .first()
+            )
+        ) is None:
+            raise IndexError("User not found")
+
+        return sql_alchemy_user

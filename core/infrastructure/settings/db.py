@@ -1,5 +1,6 @@
 from contextlib import contextmanager
 from sqlalchemy import create_engine
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from core.infrastructure.settings.env_handler import settings
@@ -30,5 +31,11 @@ def get_session():
     session = SessionLocal()
     try:
         yield session
+    except IntegrityError as e:
+        session.rollback()
+        raise e
+    except IndexError as e:
+        session.rollback()
+        raise e
     finally:
         session.close()
